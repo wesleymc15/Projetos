@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#292421</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSecondary">#292421</color>
+    <color name="tabsScrollCollor">#ffffff</color>
+    <color name="tabColor">#222526</color>
+    <color name="colorCategoria">#ffffff</color>
+    <color name="colorViewPager">#121314</color>
+    <color name="colorGray">#222526</color>
+    <color name="darkBack">#a0181616</color>
+</resources>
