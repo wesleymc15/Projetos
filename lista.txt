@@ -1,0 +1,62 @@
+1) O que é tipagem dinâmica de variáveis, adotada pelas linguagens JavaScript e PHP? Escreva um
+breve código que demonstre essa característica na linguagem PHP.
+R: Tipo não declarado; a variável pode acomodar objetos de tipos diferentes durante sua vida.
+Código:
+<?php
+$a = 1;
+$b = 2;
+$b = "x";
+echo($a + $b); // mostra "1"
+echo($a . $b); // mostra "1a";
+?>
+
+2)Quais são as diferenças entre as linguagens PHP e JavaScript? Em que ocasiões cada uma delas
+deve ser utilizada?
+R: PHP é executada do lado do servidor, ou seja, um browser internet, na máquina do usuário, faz um pedido de página
+e outro computador se encarrega de fazer todo o processamento necessário enviando apenas o resultado em seguida.
+JavaScript por sua vez é executada do lado do cliente, sendo o código enviado junto com a página Internet e o processamento
+feito pelo browser.
+A linguagem PHP permite acesso a bancos de dados de forma muito mais simples, pois pode trabalhar diretamente com as conexões
+abertas entre o servidor de páginas e o servidor de bancos de dados. Como JavaScript é executada do lado do cliente,
+fica muito mais complicado criar uma conexão por meio da rede para acesso a dados e criação de páginas dinâmicas.
+Um dos grandes diferenciais para se usar JavaScript é tirar a sobrecarga de processamento do servidor, fazendo com que um
+pouco dessa carga fique por conta do cliente. Por exemplo, para validar o preenchimento de determinados campos num
+formulário HTML, a verificação pode ser feita no cliente antes de enviar os dados pela rede, ganhando no tempo de transferência
+ dos dados.
+
+3)O que são as variáveis superglobais do PHP? Dê um exemplo de uma variável superglobal, e
+descreva a sua finalidade.
+R: São variáveis que podem ser acessadas em
+qualquer escopo, e são elas $GLOBALS, $_SERVER, $_GET, $_POST,
+$_COOKIE, $_FILES, $_ENV, $_REQUEST e $_SESSION. Acontece que não é
+possível definir uma outra variável como superglobal, e aí a confusão começa.
+
+4)Considere um formulário HTML inicializado a partir do código <form action=”processa.php”
+method=get> e outro formulário inicializado a partir do código <form action=”processa.php”
+method=post>. Perceba que os dois formulários possuem abordagens diferentes para envio de
+dados para o servidor. Qual é a diferença entre essas duas abordagens?
+
+5)Descreva o funcionamento da arquitetura de três camadas, adotada em aplicações Web que
+envolvem acesso a bases de dados.
+R: Arquitetura 3 camadas é um padrão de arquitetura que descreve como três camadas de desenvolvimento relacionam entre si.
+Essa arquitetura fornece uma maneira de dividir as funcionalidades envolvidas na manutenção e apresentação de uma aplicação.
+Foi desenvolvida com objetivo de mapear as tarefas de entrada, processamento e saída para o modelo de interação com o usuário,
+assim sendo mais fácil mapear os conceitos no domínio de aplicações.
+As camadas são:
+
+   Camada de Apresentação: tem como função exibir as informações. Usada para receber as entradas e apresentar o resultado,
+   ou seja, é a interface com o usuário.
+
+   Camada de Regra de Negócio: responsável por controlar todo o fluxo de informação. Intermediária entre a camada de
+   apresentação e acesso a dados. Nesta camada é executada a regra de negócio (inteligência do sistema).
+
+   Camada de Acesso a Dados: é responsável pela persistência e acesso aos dados da aplicação.
+
+6)Por que dizemos que o HTTP é um protocolo que não mantém estado, isto é não mantem uma
+conexão? De que forma as sessões e os cookies são usados para lidar com essa limitação do HTTP?
+R: O protocolo HTTP é stateless, ou seja, ele não mantém um estado/conexão. Toda a interação que o seu cliente fizer com
+um servidor Web acarretará em uma nova requisição e resposta.
+As requisições são independentes e possuem um tempo de vida (conexão, envio de mensagem, resposta, encerramento da conexão).
+O servidor Web não é capaz de identificar se duas requisições vieram de um mesmo navegador, e o mesmo não faz nenhum
+gerenciamento em memória para que mensagens sejam compartilhadas entre requisições.
+É para suprir esta necessidade que entram os cookies e sessões.
