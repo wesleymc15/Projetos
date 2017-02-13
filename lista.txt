@@ -73,3 +73,45 @@ podemos até permitir que algumas informações sejam armazenadas em um cookie, 
  pela Web.
 Quando iniciamos uma sessão, é enviado um cookie para o navegador, com um valor único que corresponde a sessão aberta no
 servidor Web.
+
+10) O que são Namespaces e para que são usadas?
+
+
+13) Explique em poucas palavras o funcionamento do padrão de funcionamento front controller,
+também adotado pelo Yii2 e demais frameworks para a Web. Dentro desse contexto, explique como
+as rotas do Yii 2 são usadas para determinar as páginas que a aplicação deve carregar mediante as
+requisições dos usuários.
+
+R: O padrão de design do software do front-controller está listado em vários catálogos de padrões e relacionado ao design
+de aplicativos da Web. É "um controlador que lida com todas as solicitações de um site", que é uma estrutura útil para
+desenvolvedores de aplicativos da Web para obter a flexibilidade e reutilização sem redundância de código.
+
+14) Quais são as diferenças entre Widgets e Helpers, adotados pelo framework Yii 2?
+R: Widgets são blocos de códigos reusáveis que são usados nas
+views para criar elementos de interface mais complexos
+• Por exemplo, um widget DetailView serve para visualizar os
+dados de uma instância de um modelo:
+use yii\widgets\DetailView;
+<?= DetailView::widget([
+'model' => $model,
+'attributes' => [
+'id',
+'nome',
+'sigla',
+'descricao:ntext',
+],
+]) ?>
+
+Helpers, são classes
+que ajudam a simplificar tarefas de programação comuns
+– Algumas tarefas facilitadas por helpers: manipulação de strings e
+arrays, geração de formulários, inserção de links e imagens, etc
+• Os helpers estão organizados sob o namespace yii\helpers
+• Todas as funções disponibilizadas por tais classes são estáticas
+– Isto é, os helpers não precisam ser instanciados antes de
+serem usados
+
+15)ORM
+
+R:RM é uma técnica de mapeamento objeto relacional que visa criar uma camada de mapeamento entre nosso
+modelo de objetos (aplicação) e nosso modelo relacional (banco de dados) de forma a abstrair o acesso ao mesmo.
