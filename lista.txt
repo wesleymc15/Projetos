@@ -60,3 +60,16 @@ As requisições são independentes e possuem um tempo de vida (conexão, envio 
 O servidor Web não é capaz de identificar se duas requisições vieram de um mesmo navegador, e o mesmo não faz nenhum
 gerenciamento em memória para que mensagens sejam compartilhadas entre requisições.
 É para suprir esta necessidade que entram os cookies e sessões.
+
+7)Quais são as diferenças entre Cookies e Sessões?
+R: Através de cookies o servidor Web é capaz de trocar informações de estado com o navegador do usuário.
+Desse modo, somos capazes de adicionar produtos a um carrinho de compras, sem perder estas informações ao mudar
+de página, sair do website ou até mesmo fechar o navegador. um cookie é uma pequena quantidade de informação persistida
+temporariamente pelo navegador.
+As sessões têm um princípio similar aos cookies, só que o armazenamento do estado é feito pelo servidor Web, e não pelo navegador.
+Por exemplo, quando construímos uma aplicação que necessita de autenticação, no momento em que o usuário efetuar o login,
+podemos até permitir que algumas informações sejam armazenadas em um cookie, mas dados mais “sensíveis”, como usuário e e-mail,
+ são mais interessantes de serem guardadas em sessões. Isto, pois não é seguro que esse tipo de informação fique “viajando”
+ pela Web.
+Quando iniciamos uma sessão, é enviado um cookie para o navegador, com um valor único que corresponde a sessão aberta no
+servidor Web.
